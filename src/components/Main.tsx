@@ -10,9 +10,11 @@ const Main: React.SFC<MainProps> = () => {
     return (
         <div className="app">
             <div className="todoList">
-                {todos.map((todo, id) => (
-                    <Todo key={id} index={id} todo={todo} />
-                ))}
+                <ul className="list-group">
+                    {todos.map((todo, id) => (
+                        <Todo key={id} index={id} todo={todo} />
+                    ))}
+                </ul>
             </div>
         </div>
     );

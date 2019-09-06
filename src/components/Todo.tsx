@@ -7,7 +7,11 @@ export interface TodoProps {
 }
 
 const Todo: React.SFC<TodoProps> = ({ todo, index }) => {
-    return <div className="todo">{todo.text}</div>;
+    return (
+        <div className="col-md-6 offset-md-4">
+            <li className="list-group-item">{todo.text}</li>
+        </div>
+    );
 };
 
 export default Todo;

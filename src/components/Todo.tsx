@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { Todo as TodoModel } from '../models/Todo';
+import { ITodo } from '../models/ITodo';
 
 export interface TodoProps {
-    todo: TodoModel;
+    todo: ITodo;
     index: number;
 }
 
 const Todo: React.SFC<TodoProps> = ({ todo, index }) => {
     return (
-        <div className="col-md-6 offset-md-4">
+        <div className="col-md-6 offset-md-3">
             <li className="list-group-item">{todo.text}</li>
         </div>
     );

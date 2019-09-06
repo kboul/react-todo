@@ -1,4 +1,6 @@
-export const todos = [
+import { ITodo } from '../models/ITodo';
+
+export const todos: Array<ITodo> = [
     {
         text: 'Learn about React',
         isCompleted: false

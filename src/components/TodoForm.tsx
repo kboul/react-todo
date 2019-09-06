@@ -20,6 +20,7 @@ const TodoForm: React.SFC<TodoFormProps> = ({ addTodo }) => {
             <input
                 type="text"
                 className={`input ${styles.input}`}
+                placeholder="Add a todo"
                 value={value}
                 onChange={e => setValue(e.target.value)}
             />

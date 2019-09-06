@@ -1,23 +1,11 @@
 import React, { useState } from 'react';
 import Todo from './Todo';
+import { todos as todosData } from '../mockData/todos';
 
 export interface MainProps {}
 
 const Main: React.SFC<MainProps> = () => {
-    const [todos, setTodos] = useState([
-        {
-            text: 'Learn about React',
-            isCompleted: false
-        },
-        {
-            text: 'Meet friend for lunch',
-            isCompleted: false
-        },
-        {
-            text: 'Go out with Ioanna',
-            isCompleted: false
-        }
-    ]);
+    const [todos, setTodos] = useState(todosData);
 
     return (
         <div className="app">

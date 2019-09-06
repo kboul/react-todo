@@ -3,7 +3,7 @@ import Main from './Main';
 
 const App: React.FC = () => {
     return (
-        <div className="container text-center">
+        <div className="container mx-auto">
             <Main />
         </div>
     );

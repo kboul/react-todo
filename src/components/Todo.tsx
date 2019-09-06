@@ -9,7 +9,12 @@ export interface TodoProps {
 const Todo: React.SFC<TodoProps> = ({ todo, index }) => {
     return (
         <div className="col-md-6 offset-md-3">
-            <li className="list-group-item">{todo.text}</li>
+            <li
+                className={`list-group-item ${
+                    todo.isCompleted ? 'line-through' : ''
+                }`}>
+                {todo.text}
+            </li>
         </div>
     );
 };

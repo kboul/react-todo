@@ -5,9 +5,15 @@ export interface TodoProps {
     todo: ITodo;
     index: number;
     completeTodo: (arg1: number) => void;
+    removeTodo: (arg1: number) => void;
 }
 
-const Todo: React.SFC<TodoProps> = ({ todo, index, completeTodo }) => {
+const Todo: React.SFC<TodoProps> = ({
+    todo,
+    index,
+    completeTodo,
+    removeTodo
+}) => {
     return (
         <div className="col-md-6 offset-md-3">
             <li
@@ -16,7 +22,9 @@ const Todo: React.SFC<TodoProps> = ({ todo, index, completeTodo }) => {
                     textDecoration: todo.isCompleted ? 'line-through' : ''
                 }}>
                 {todo.text}
-                <button className="btn btn-primary btn-sm float-right ml-2">
+                <button
+                    className="btn btn-primary btn-sm float-right ml-2"
+                    onClick={() => removeTodo(index)}>
                     x
                 </button>
                 <button

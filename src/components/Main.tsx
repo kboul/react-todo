@@ -18,6 +18,12 @@ const Main: React.SFC = () => {
         setTodos(newTodos);
     };
 
+    const removeTodo = (index: number) => {
+        const newTodos: Array<ITodo> = [...todos];
+        newTodos.splice(index, 1);
+        setTodos(newTodos);
+    };
+
     return (
         <div className="app">
             <div className="todoList">
@@ -28,6 +34,7 @@ const Main: React.SFC = () => {
                             index={id}
                             todo={todo}
                             completeTodo={completeTodo}
+                            removeTodo={removeTodo}
                         />
                     ))}
                 </ul>

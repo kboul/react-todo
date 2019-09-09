@@ -16,6 +16,9 @@ const Todo: React.SFC<TodoProps> = ({ todo, index, completeTodo }) => {
                     textDecoration: todo.isCompleted ? 'line-through' : ''
                 }}>
                 {todo.text}
+                <button className="btn btn-primary btn-sm float-right ml-2">
+                    x
+                </button>
                 <button
                     className="btn btn-primary btn-sm float-right"
                     onClick={() => completeTodo(index)}>

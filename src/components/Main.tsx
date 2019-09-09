@@ -12,12 +12,23 @@ const Main: React.SFC = () => {
         setTodos(newTodos);
     };
 
+    const completeTodo = (index: number) => {
+        const newTodos: Array<ITodo> = [...todos];
+        newTodos[index].isCompleted = true;
+        setTodos(newTodos);
+    };
+
     return (
         <div className="app">
             <div className="todoList">
                 <ul className="list-group">
                     {todos.map((todo: ITodo, id: number) => (
-                        <Todo key={id} index={id} todo={todo} />
+                        <Todo
+                            key={id}
+                            index={id}
+                            todo={todo}
+                            completeTodo={completeTodo}
+                        />
                     ))}
                 </ul>
                 <TodoForm addTodo={addTodo} />

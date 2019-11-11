@@ -29,7 +29,9 @@
         "collectCoverageFrom": [
             "src/**/*.{ts,tsx}",
             "!src/index.tsx",
-            "!src/serviceWorker.ts"
+            "!src/serviceWorker.ts",
+            "!src/react-app-env.d.ts",
+            "!src/models/**"
         ]
     },
     "eslintConfig": {

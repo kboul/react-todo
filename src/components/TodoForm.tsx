@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../sass/TodoForm.module.sass';
 
 export interface TodoFormProps {
@@ -6,7 +6,7 @@ export interface TodoFormProps {
 }
 
 const TodoForm: React.SFC<TodoFormProps> = ({ addTodo }) => {
-    const [value, setValue] = useState<string>('');
+    const [value, setValue] = React.useState<string>('');
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
@@ -16,10 +16,11 @@ const TodoForm: React.SFC<TodoFormProps> = ({ addTodo }) => {
     };
 
     return (
-        <div className="text-center">
-            <form onSubmit={handleSubmit}>
+        <div data-test="component-todo-form" className="text-center">
+            <form data-test="form-input" onSubmit={handleSubmit}>
                 <input
                     type="text"
+                    data-test="input-box"
                     className={`input ${styles.input}`}
                     placeholder="Add a todo..."
                     value={value}

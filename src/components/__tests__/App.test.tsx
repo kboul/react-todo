@@ -8,6 +8,7 @@ const setup = () => {
 };
 
 test('renders without error', () => {
-    const component = findByTestAttr(setup(), 'component-app');
-    expect(component).toHaveLength(1);
+    const wrapper = setup();
+    const componentApp = findByTestAttr(wrapper, 'component-app');
+    expect(componentApp).toHaveLength(1);
 });

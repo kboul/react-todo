@@ -51,8 +51,8 @@ describe('todo.isCompleted is true', () => {
     });
 
     test('Todo renders without error', () => {
-        const componentTodoForm = findByTestAttr(wrapper, 'component-todo');
-        expect(componentTodoForm).toHaveLength(1);
+        const componentTodo = findByTestAttr(wrapper, 'component-todo');
+        expect(componentTodo).toHaveLength(1);
     });
 
     test('has the proper style based on todo.isCompleted value', () => {

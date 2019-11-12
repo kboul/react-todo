@@ -3,7 +3,7 @@ import Main from './Main';
 
 const App: React.FC = () => {
     return (
-        <div className="container mx-auto">
+        <div data-test="component-app" className="container mx-auto">
             <Main />
         </div>
     );

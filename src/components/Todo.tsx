@@ -15,20 +15,23 @@ const Todo: React.SFC<TodoProps> = ({
     removeTodo
 }) => {
     return (
-        <div className="col-md-6 offset-md-3">
+        <div data-test="component-todo" className="col-md-6 offset-md-3">
             <li
                 className="list-group-item"
+                data-test="todo-list"
                 style={{
                     textDecoration: todo.isCompleted ? 'line-through' : ''
                 }}>
                 {todo.text}
                 <button
                     className="btn btn-primary btn-sm float-right ml-2"
+                    data-test="remove-todo-btn"
                     onClick={() => removeTodo(index)}>
                     x
                 </button>
                 <button
                     className="btn btn-primary btn-sm float-right"
+                    data-test="complete-todo-btn"
                     onClick={() => completeTodo(index)}>
                     Complete
                 </button>

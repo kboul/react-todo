@@ -19,3 +19,15 @@ npm start
 ```
 
 browser listens to [http://localhost:3000](http://localhost:3000) as default port
+
+## Project Unit Tests
+
+```
+npm test
+```
+
+Get the project's test coverage
+
+```
+npm run test:coverage
+```

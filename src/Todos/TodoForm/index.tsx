@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../sass/TodoForm.module.sass';
+import styles from './index.module.sass';
 
 export interface TodoFormProps {
     addTodo: (arg1: string) => void;

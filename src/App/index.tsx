@@ -1,9 +1,9 @@
 import React from 'react';
-import Main from './Main';
+import Main from '../Todos';
 
 const App: React.FC = () => {
     return (
-        <div data-test="component-app" className="container mx-auto">
+        <div data-test="component-app" className="container mx-auto mt-4">
             <Main />
         </div>
     );

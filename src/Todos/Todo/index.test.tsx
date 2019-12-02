@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Todo from '../Todo';
+import Todo from '.';
 import { findByTestAttr } from '../../test/testUtils';
 
 const mockCompleteTodo = jest.fn();

@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Main from '../Main';
-import { findByTestAttr } from '../../test/testUtils';
-import { todos } from '../../mockData/todos';
+import Main from '.';
+import { findByTestAttr } from '../test/testUtils';
+import { todos } from './mockData/todos';
 
 const setup = () => {
     return shallow(<Main />);
@@ -10,7 +10,7 @@ const setup = () => {
 
 test('Main renders without error', () => {
     const wrapper = setup();
-    const componentMain = findByTestAttr(wrapper, 'component-main');
+    const componentMain = findByTestAttr(wrapper, 'component-todos');
     expect(componentMain).toHaveLength(1);
 });
 

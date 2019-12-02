@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import TodoForm from '../TodoForm';
+import TodoForm from '.';
 import { findByTestAttr } from '../../test/testUtils';
 
 const mockAddTodo = jest.fn();

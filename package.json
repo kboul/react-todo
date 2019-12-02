@@ -31,7 +31,7 @@
             "!src/index.tsx",
             "!src/serviceWorker.ts",
             "!src/react-app-env.d.ts",
-            "!src/models/**"
+            "!src/Todos/models/**"
         ]
     },
     "eslintConfig": {

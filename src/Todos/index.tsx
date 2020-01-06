@@ -1,8 +1,8 @@
 import React from 'react';
 import Todo from './Todo';
 import TodoForm from './TodoForm';
-import { ITodo } from './models/ITodo';
-import { todos as todosData } from './mockData/todos';
+import { ITodo } from './models';
+import { todos as todosData } from './constants';
 import { idGenerator } from './TodoForm/utils';
 
 const Todos: React.SFC = () => {

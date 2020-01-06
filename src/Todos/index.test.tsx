@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Main from '.';
 import { findByTestAttr } from '../test/testUtils';
-import { todos } from './mockData/todos';
+import { todos } from './constants';
 
 const setup = () => {
     return shallow(<Main />);

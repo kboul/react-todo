@@ -1,4 +1,4 @@
-import { ITodo } from '../models/ITodo';
+import { ITodo } from './models';
 
 export const todos: Array<ITodo> = [
     {

@@ -1,8 +1,9 @@
 import React from 'react';
 import Todo from './Todo';
-import { todos as todosData } from './mockData/todos';
 import TodoForm from './TodoForm';
 import { ITodo } from './models/ITodo';
+import { todos as todosData } from './mockData/todos';
+import { idGenerator } from './TodoForm/utils';
 
 const Todos: React.SFC = () => {
     const [todos, setTodos] = React.useState<Array<ITodo>>(todosData);
@@ -28,7 +29,7 @@ const Todos: React.SFC = () => {
         <div data-test="component-todos">
             <ul className="list-group">
                 {todos.map((todo: ITodo, id: number) => (
-                    <div data-test="component-todo" key={id}>
+                    <div data-test="component-todo" key={idGenerator()}>
                         <Todo
                             index={id}
                             todo={todo}

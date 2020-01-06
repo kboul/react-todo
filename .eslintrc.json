@@ -1,13 +1,16 @@
 {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "jest": true
     },
     "extends": [
         "eslint:recommended",
+        "plugin:react/recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "airbnb",
-        "prettier"
+        "prettier",
+        "plugin:import/typescript"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -22,5 +25,40 @@
         "sourceType": "module"
     },
     "plugins": ["react", "@typescript-eslint", "prettier"],
-    "rules": {}
+    "rules": {
+        "no-param-reassign": [2, { "props": false }],
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": "off",
+        "import/prefer-default-export": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+        "no-console": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never",
+                "mjs": "never"
+            }
+        ],
+        "react/jsx-closing-bracket-location": "off"
+    },
+    "overrides": [
+        {
+            "files": ["serviceWorker.ts", "react-app-env.d.ts"],
+            "rules": {
+                "no-use-before-define": "off",
+                "spaced-comment": "off"
+            }
+        },
+        // interface is defined but never used
+        {
+            "files": ["*.ts", "*.tsx"],
+            "rules": {
+                "@typescript-eslint/no-unused-vars": [2, { "args": "none" }]
+            }
+        }
+    ]
 }

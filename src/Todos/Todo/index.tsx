@@ -1,19 +1,12 @@
-import React from 'react';
-import { ITodo } from '../models/ITodo';
+import React, { FC } from 'react';
+import { TodoProps } from './models';
 
-export interface TodoProps {
-    todo: ITodo;
-    index: number;
-    completeTodo: (arg1: number) => void;
-    removeTodo: (arg1: number) => void;
-}
-
-const Todo: React.SFC<TodoProps> = ({
+const Todo: FC<TodoProps> = ({
     todo,
     index,
     completeTodo,
     removeTodo
-}) => {
+}: TodoProps) => {
     return (
         <div data-test="component-todo" className="col-md-6 offset-md-3">
             <li
@@ -24,12 +17,14 @@ const Todo: React.SFC<TodoProps> = ({
                 }}>
                 {todo.text}
                 <button
+                    type="button"
                     className="btn btn-primary btn-sm float-right ml-2"
                     data-test="remove-todo-btn"
                     onClick={() => removeTodo(index)}>
                     x
                 </button>
                 <button
+                    type="button"
                     className="btn btn-primary btn-sm float-right"
                     data-test="complete-todo-btn"
                     onClick={() => completeTodo(index)}>

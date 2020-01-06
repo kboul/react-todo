@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import styles from './index.module.sass';
+import { TodoFormProps } from './models';
 
-export interface TodoFormProps {
-    addTodo: (arg1: string) => void;
-}
-
-const TodoForm: React.SFC<TodoFormProps> = ({ addTodo }) => {
+const TodoForm: FunctionComponent<TodoFormProps> = ({
+    addTodo
+}: TodoFormProps) => {
     const [value, setValue] = React.useState<string>('');
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {

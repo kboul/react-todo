@@ -16,7 +16,7 @@ test('TodoForm renders without error', () => {
 });
 
 describe('onChange & onSubmit events', () => {
-    let mockSetValue = jest.fn();
+    const mockSetValue = jest.fn();
     let wrapper: any;
 
     describe('value is empty', () => {
